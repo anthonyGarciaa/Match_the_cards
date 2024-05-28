@@ -1,0 +1,43 @@
+extends layout
+block stylelink 
+ link(rel="stylesheet", href="css/une_las_cartas.css")
+block content
+
+   -const allFotos=["1","2","3","4","5","6","7","8"];
+
+   -var fotosRandom = [];
+   -var fotosParejas = [];
+
+   -const ordenRandom = (arrayFotos) => {
+   -for (let i = 0; i < arrayFotos.length; i++)
+     -fotosRandom[i] = Math.floor(Math.random() * arrayFotos.length + 1)
+   -fotosParejas=fotosRandom.slice().reverse()
+
+
+   -const desordenarArrayParejas = (array) => {
+   -for(let i = array.length - 1; i > 0; i--) 
+      -const j = Math.floor(Math.random() * (i + 1));
+      -[array[i], array[j]] = [array[j], array[i]];
+   -}
+
+   -desordenarArrayParejas(fotosParejas);
+
+   -}
+
+   -ordenRandom(allFotos);
+   h1(class="narrador") Puntuacion: 0
+   h2(class="oportunidades") Oportunidades: 10
+   div(class="container")
+    each item in fotosRandom
+     div(class!="card "+item)
+      img( class="novolteada" src!="img/une_las_cartas_imgs/img"+item+".jpg")
+    each item in fotosParejas
+     div(class!="card "+item)
+      img( class="novolteada" src!="img/une_las_cartas_imgs/img"+item+".jpg")
+   div(class="modal")
+    p Has ganado la partida
+    div(class="buttons")
+       button(class='reiniciar') Reiniciar
+       button(class='salir') Salir
+block script 
+ script(src="js/une_las_cartas.js")

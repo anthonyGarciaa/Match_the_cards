@@ -1,0 +1,164 @@
+:root{
+    --gta-font:'gta';
+    --buttons-font:'buttons';
+    --narradores-font:'narradores'
+}
+body{
+    background-image: url("../img/une_las_cartas_imgs/fondo.jpg");
+    background-size: cover;
+}
+@font-face {
+    font-family:'gta';
+    src: url(../fonts/dimitri/DIMIS___.TTF);
+}
+@font-face {
+    font-family:'buttons';
+    src: url(../fonts/karmatic_arcade/ka1.ttf);
+}
+@font-face {
+    font-family:'narradores';
+    src: url(../fonts/dimitri/DIMITRI_.TTF);
+}
+.narrador{
+    color: rgba(68, 255, 0, 0.801);
+    align-self: center;
+    text-align: center;
+    font-size: 40px;
+    font-family: var(--narradores-font);
+}
+.oportunidades{
+    color: rgba(68, 255, 0, 0.801);
+    align-self: center;
+    text-align: center;
+    font-size: 40px;
+    font-family: var(--narradores-font);
+}
+.modal{
+    opacity: 0;
+    width: 60%;
+    margin:auto;
+    background-color: #ccccccbd;
+    color: #5a5a5a;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 8px;
+}
+.modal p{
+    font-size: 300%;
+    font-family: var(--gta-font);   
+}
+.lose{
+    color: red;
+}
+.modal button{
+    font-family: var(--buttons-font);
+}
+
+.modal .buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 20%;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+.reiniciar, .salir{
+    transition: background-color .3s;
+    width: 100%;
+    font-size: 150%;
+    background-color: #5a5a5a;
+    color: rgba(37, 189, 37, 0.848);
+    border-radius: 10px;
+}
+.reiniciar{
+    margin-bottom: 10%;
+}
+
+.modal button:hover{
+    background-color: #ccccccbd;  
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgba(66, 64, 64, 0.612); 
+}
+.card{
+   justify-content: center;
+   align-items: center;
+   display: flex;
+   width: 15%;
+   max-height:10%;
+   padding: 20px;
+   background-color: rgba(128, 128, 128, 0.55);
+   border: 10px solid rgba(37, 189, 37, 0.848);
+   margin: 1%;
+   border-radius: 20px ;
+   transition: all .5s; 
+   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+   
+}
+.card:hover{
+    background-color:  rgba(213, 212, 212, 0.55);
+    border-color: rgba(128, 255, 0, 0.717);
+}
+img{
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 1px 1px 20px 1px blue 100;
+}
+.novolteada,.paraVoltear{
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.volteada{
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+
+@keyframes aparecer {
+    0% {
+        opacity:0;
+    }
+
+    100% {
+        opacity:1;
+
+    }
+}
+
+@keyframes desaparecer {
+    0% {
+       opacity: 1;
+       position: relative;
+       left: 2%;
+    }
+    50%{
+        background-color:rgb(68, 255, 0);
+    }
+    100% {
+        opacity: 0;
+        right: 2%;
+    }
+}
+@keyframes error {
+    0% {
+       position: relative;
+       left: 2%;
+    }
+    50%{
+        background-color:rgba(255, 17, 0, 0.953);
+    }
+    100% {
+        background-color: rgba(128, 128, 128, 0.55);
+        right: 2%;
+    }
+}
