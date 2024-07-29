@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 :root{
     --gta-font:'gta';
     --buttons-font:'buttons';
@@ -82,21 +87,22 @@ body{
     background-color: #ccccccbd;  
 }
 .container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: rgba(66, 64, 64, 0.612); 
+    margin: auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row: 1fr 1fr 1fr 1fr; 
 }
 .card{
    justify-content: center;
    align-items: center;
    display: flex;
-   width: 15%;
-   max-height:10%;
+   width: 12vw;
+   height:97%;
    padding: 20px;
    background-color: rgba(128, 128, 128, 0.55);
    border: 10px solid rgba(37, 189, 37, 0.848);
-   margin: 1%;
+   margin: 3%;
    border-radius: 20px ;
    transition: all .5s; 
    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -108,7 +114,7 @@ body{
 }
 img{
     border-radius: 20px;
-    width: 100%;
+    width: 8vw;
     height: 100%;
     object-fit: cover;
     box-shadow: 1px 1px 20px 1px blue 100;
