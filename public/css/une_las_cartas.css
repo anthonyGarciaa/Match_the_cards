@@ -100,8 +100,8 @@ body{
    justify-content: center;
    align-items: center;
    display: flex;
-   width: 7%;
-   max-height:10%;
+   width: 13.7%;
+   min-height:13.7%;
    background-color: rgba(128, 128, 128, 0.55);
    border: .5vw solid rgba(37, 189, 37, 0.848);
    margin: 1%;
