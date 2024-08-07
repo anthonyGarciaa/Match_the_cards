@@ -115,12 +115,7 @@ body{
     border-color: rgba(128, 255, 0, 0.717);
 }
 img{
-<<<<<<< HEAD
     width: 100%;
-=======
-    border-radius: 20px;
-    width: 8vw;
->>>>>>> bfd77512e90019e0e6d49cf812c4b1ef89e5128a
     height: 100%;
     object-fit: cover;
     box-shadow: 1px 1px 20px 1px blue 100;
