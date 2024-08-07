@@ -82,6 +82,8 @@ body{
     background-color: #ccccccbd;  
 }
 .container{
+    width: 90vw;
+    margin: auto;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -91,13 +93,12 @@ body{
    justify-content: center;
    align-items: center;
    display: flex;
-   width: 15%;
+   width: 7%;
    max-height:10%;
-   padding: 20px;
    background-color: rgba(128, 128, 128, 0.55);
-   border: 10px solid rgba(37, 189, 37, 0.848);
+   border: .5vw solid rgba(37, 189, 37, 0.848);
    margin: 1%;
-   border-radius: 20px ;
+   border-radius: 10% ;
    transition: all .5s; 
    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
    
@@ -107,7 +108,6 @@ body{
     border-color: rgba(128, 255, 0, 0.717);
 }
 img{
-    border-radius: 20px;
     width: 100%;
     height: 100%;
     object-fit: cover;
