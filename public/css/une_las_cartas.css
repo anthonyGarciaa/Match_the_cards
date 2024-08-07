@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 :root{
     --gta-font:'gta';
     --buttons-font:'buttons';
@@ -88,6 +93,8 @@ body{
     justify-content: center;
     flex-wrap: wrap;
     background-color: rgba(66, 64, 64, 0.612); 
+
+
 }
 .card{
    justify-content: center;
@@ -108,7 +115,12 @@ body{
     border-color: rgba(128, 255, 0, 0.717);
 }
 img{
+<<<<<<< HEAD
     width: 100%;
+=======
+    border-radius: 20px;
+    width: 8vw;
+>>>>>>> bfd77512e90019e0e6d49cf812c4b1ef89e5128a
     height: 100%;
     object-fit: cover;
     box-shadow: 1px 1px 20px 1px blue 100;
